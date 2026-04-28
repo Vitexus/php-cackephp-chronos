@@ -1,0 +1,16 @@
+Source: php-cakephp-chronos
+Section: php
+Priority: optional
+Maintainer: CyberVitexus <cybervitexus@gmail.com>
+Build-Depends: debhelper-compat (= 13), jq
+Standards-Version: 4.6.2
+Homepage: https://cakephp.org
+Vcs-Git: https://github.com/Vitexus/php-cackephp-chronos.git
+Rules-Requires-Root: no
+
+Package: php-cakephp-chronos
+Architecture: all
+Depends: ${misc:Depends}, php-cli | php, composer, php-psr-clock
+Description: CakePHP Chronos - immutable date and time library
+ A simple API extension for DateTime providing immutable date and
+ time objects compatible with the PSR-20 Clock interface.
