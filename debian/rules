@@ -9,5 +9,5 @@ override_dh_install:
 	mkdir -p debian/php-cakephp-chronos/usr/share/php/Cake/Chronos
 	cp -r src/. debian/php-cakephp-chronos/usr/share/php/Cake/Chronos/
 	install -m 644 debian/autoload.php debian/php-cakephp-chronos/usr/share/php/Cake/Chronos/autoload.php
-	sed -i "s|: 'unknown'|: '$(PKG_SOURCE)'|" debian/php-cakephp-chronos/usr/share/php/Cake/Chronos/autoload.php
-	sed -i "s|: '0.0.0'|: '$(PKG_VERSION)'|" debian/php-cakephp-chronos/usr/share/php/Cake/Chronos/autoload.php
+	sed -i "s|'unknown'|'$(PKG_SOURCE)'|" debian/php-cakephp-chronos/usr/share/php/Cake/Chronos/autoload.php
+	sed -i "s|'0.0.0'|'$(PKG_VERSION)'|" debian/php-cakephp-chronos/usr/share/php/Cake/Chronos/autoload.php
